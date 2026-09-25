@@ -17,9 +17,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prism Studio",
+  title: "North Studio",
   description:
-    "Prism Studio — A modern creative platform for designing, building, and managing digital experiences with speed, simplicity, and style.",
+    "North Studio — A modern creative platform for designing, building, and managing digital experiences with speed, simplicity, and style.",
 };
 
 export default function RootLayout({

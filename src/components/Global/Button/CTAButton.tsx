@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useSpring, useTransform } from "motion/react";
 
-export default function TryNowButton() {
+export default function TryNowButton({ name, navLink }: { name: string, navLink: any }) {
     const ref = useRef<HTMLAnchorElement>(null);
     const [hovered, setHovered] = useState(false);
 
@@ -33,8 +33,7 @@ export default function TryNowButton() {
 
     return (
         <motion.a
-            ref={ref}
-            href="/pricing"
+            href={navLink}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={handleMouseLeave}
@@ -51,7 +50,7 @@ export default function TryNowButton() {
                     }}
                 >
                     <span className="font-mono text-sm font-medium leading-[1.4] inline-block text-[#0D1017]">
-                        Try now
+                        {name}
                     </span>
 
                     <motion.span

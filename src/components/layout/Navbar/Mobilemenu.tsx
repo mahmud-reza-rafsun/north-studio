@@ -74,6 +74,7 @@ function MobileNavItem({ item, onClose }: { item: NavItemType; onClose: () => vo
 }
 
 export default function MobileMenu({ items, isOpen, onClose }: MobileMenuProps) {
+    const name = "Contact Us"
     return (
         <AnimatePresence>
             {isOpen && (
@@ -92,7 +93,7 @@ export default function MobileMenu({ items, isOpen, onClose }: MobileMenuProps) 
                         </nav>
 
                         <div className="px-4 pb-4 pt-1 border-t border-black/5 dark:border-white/5">
-                            <TryNowButton />
+                            <TryNowButton name={name} />
                         </div>
                     </div>
                 </motion.div>

@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import PrismLogo from "./Prismlogo";
-import { NAV_ITEMS } from "@/utils/config";
 import NavItem from "./Navitem";
 import ThemeToggle from "@/provider/ThemeToggle/ThemeToggle";
 import TryNowButton from "@/components/Global/Button/CTAButton";
 import MobileMenu from "./Mobilemenu";
+import { NAV_ITEMS } from "@/utils/nav.items";
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -28,6 +28,8 @@ export default function Navbar() {
         window.addEventListener("resize", handler);
         return () => window.removeEventListener("resize", handler);
     }, []);
+
+    const name = "Contact"
 
     return (
         <motion.header
@@ -66,7 +68,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-2">
                         <ThemeToggle />
                         <div className="hidden md:block">
-                            <TryNowButton />
+                            <TryNowButton name={name} navLink="/pricing" />
                         </div>
 
                         {/* Mobile hamburger */}

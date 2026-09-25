@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ✅ Tailwind v4-এ class-based dark mode চালু করার লাইন */
+
 @variant dark (&:where(.dark, .dark *));
 
 :root {
@@ -8,7 +8,6 @@
   --foreground: #171717;
 }
 
-/* ✅ .dark ক্লাসে ভ্যারিয়েবল ওভাররাইড */
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;

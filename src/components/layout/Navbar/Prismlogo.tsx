@@ -67,7 +67,7 @@ export default function PrismLogo() {
                 transition={{ duration: 0.3 }}
                 className="font-mono text-lg font-semibold tracking-tight text-gray-900 dark:text-white"
             >
-                Prism
+                North Studio
             </motion.span>
         </Link>
     );
